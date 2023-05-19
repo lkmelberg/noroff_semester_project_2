@@ -35,7 +35,7 @@ export const passSign = document.querySelector("#passSign");
 export const signForm = document.querySelector(".signForm");
 
 // signout
-export const signoutBtn = document.querySelector(".signout");
+export const logoutBtn = document.querySelector(".logout");
 
 // get posts
 export const updateContainer = document.querySelector(".updateContainer");
