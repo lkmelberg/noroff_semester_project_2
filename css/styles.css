@@ -70,6 +70,11 @@ body {
   margin-left: 3rem;
 }
 
+.credit {
+  color: #fff;
+  margin-right: 1rem;
+}
+
 .btn {
   color: #fff;
   background-color: #000;
