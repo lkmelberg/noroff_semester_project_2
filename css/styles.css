@@ -49,15 +49,24 @@ body {
 }
 
 .bg-dark {
-  background-color: #000;
+  background-color: #000 !important;
 }
 .navbar-brand {
-  max-width: 6rem;
+  max-width: 5.5rem;
 }
 
 .navbar-brand img {
   width: 80%;
-  margin-left: 20px;
+  margin: 0px 20px 0px;
+}
+
+.navbar-avatar img {
+  max-height: 3rem;
+  margin-right: 2rem;
+}
+
+.navbarItems {
+  margin-left: 3rem;
 }
 
 .btn {
