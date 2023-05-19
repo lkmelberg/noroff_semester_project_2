@@ -4,10 +4,14 @@ body {
 }
 
 /* colors 
-black: #000;
-purpleD: #6118fb;
-purpleL: #d4bfff;
-white: #fff; */
+black: #000
+white: #fff 
+light pink: #E086FC
+dark pink: #9A54B0
+green: #4CAF50
+light orange: #FC6F53
+dark orange: #B05543
+*/
 h1,
 h2,
 h3 {
@@ -25,14 +29,11 @@ h3 {
 }
 
 .fa-pen-to-square {
-  color: #6118fb;
+  color: #fff;
 }
 
 a {
   text-decoration: none;
-  color: #d4bfff;
-}
-a:hover {
   color: #fff;
 }
 
@@ -61,12 +62,12 @@ body {
 
 .btn {
   color: #fff;
-  border-color: #6118fb;
   background-color: #000;
+  margin: 0.5rem 0rem 0rem 0rem;
 }
 
 .searchBtn {
-  border-color: #d4bfff;
+  border-color: #e086fc;
   width: 10rem;
   text-align: center;
 }
@@ -78,7 +79,7 @@ body {
 }
 
 .breadcrumb a {
-  color: #6118fb;
+  color: #9a54b0;
 }
 
 .btn-rounded {
@@ -100,7 +101,7 @@ body {
 .registerSuccess,
 .signinSuccess,
 .postSuccess {
-  background: green;
+  background: #4caf50;
 }
 
 .registerError,
