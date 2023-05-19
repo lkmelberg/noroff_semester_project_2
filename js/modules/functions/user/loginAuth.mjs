@@ -41,7 +41,7 @@ export function signin(e) {
       if (accessToken !== undefined && response.ok) {
         displayMSG.innerHTML = `<div class="signinSuccess">Sign In Successful - Redirecting</div>`;
         setTimeout(function () {
-          window.location.href = `home.html`;
+          window.location.href = `index.html`;
         }, 2500);
       } else if (accessToken === undefined) {
         displayMSG.innerHTML = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
