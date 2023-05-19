@@ -4,7 +4,8 @@
   justify-content: flex-end;
 }
 
-.newItemCont {
+.newItemCont,
+.profileCont {
   padding: 2rem;
   margin: 2rem;
   border: #4caf50 1em solid;
