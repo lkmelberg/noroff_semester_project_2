@@ -66,12 +66,6 @@ body {
   margin: 0.5rem 0rem 0rem 0rem;
 }
 
-.searchBtn {
-  border-color: #e086fc;
-  width: 10rem;
-  text-align: center;
-}
-
 .breadcrumb {
   display: block;
 
@@ -86,6 +80,36 @@ body {
   margin: 5px;
 }
 
+/* login / register modal  */
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn:hover,
+.btnReg a:hover {
+  color: #000;
+  background-color: #4caf50;
+}
+
+/* success / error messages  */
 .registerSuccess,
 .registerError,
 .signinError,
