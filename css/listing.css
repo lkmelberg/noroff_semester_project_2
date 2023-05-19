@@ -1,0 +1,7 @@
+.bidItemCont .card img {
+  height: 15rem;
+  object-fit: cover;
+}
+.bidForm {
+  margin: 2rem;
+}
