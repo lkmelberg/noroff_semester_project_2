@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LeafTrade - Edit Avatar</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/index.css">
+
+        <link rel="stylesheet" href="../css/profile.css">
+
+        <script src="https://kit.fontawesome.com/cf5488008f.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="bg-light d-flex py-5">
+        <Header>
+            <nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-body-tertiary bg-dark">
+                <div class="container-fluid ">
+                    <a class="navbar-brand" href="index.html"><img src="../images/leafTradeLogoLight.png" alt="logo image"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse navbarItems" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link " href="index.html">Listings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="search.html">Search</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="profile.html">Profile</a>
+                            </li>
+                        </ul>
+                        <div class="credit">Credits: 100,-</div>
+                        <a class="navbar-avatar" href="profile.html"><img src="../images/avatarDefault.png" alt=""></a>
+                    </div>
+                </div>
+            </nav>
+        </Header>
+        <main class="col-12 d-flex justify-content-center align-items-center flex-column">
+            <div class="breadcrumb">listings -> profile -> edit avatar</div>
+            <div class="displayMSG"></div>
+            <h1>Edit Avatar <div class="profileName"></div>
+            </h1>
+            <div class="container profileCont new-post col-6 col-lg-5">
+                <h2 class="profileName">USERNAME</h2>
+
+
+                <div class="mb-3 d-flex flex-column profileAvatar">
+                    <span class="fw-bold">Current Avatar:</span>
+                    <img src="/images/ben-white-gEKMstKfZ6w-unsplash.jpg" class="img-thumbnail" alt="...">
+
+                </div>
+                <form action="POST" class="must-validate regForm">
+
+                    <div class="form-floating">
+                        <input type="url" class="form-control avatarReg" id="avatarReg" required placeholder="avatarReg">
+                        <label for="AvatarReg">New AvatarURL</label>
+                    </div>
+
+
+                    <button class="w-100 btn btn-lg btn-primary btnAvatar" type="submit">Change Avatar</button>
+
+
+
+
+                </form>
+
+            </div>
+
+        </main>
+
+        <footer id="footer" class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-muted">© 2023 LeafTrade Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </footer>
+
+
+        <script src="js/home.mjs" type="module"></script>
+
+    </body>
+
+</html>
