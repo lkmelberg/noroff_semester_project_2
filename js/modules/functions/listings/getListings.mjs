@@ -61,3 +61,18 @@ export function getAll(e) {
     console.log(error);
   }
 }
+
+//     <script>
+//         const images = [
+// 'https://media.geeksforgeeks.org/wp-content/uploads/20230306120634/unnamed.jpg',
+// 'https://media.geeksforgeeks.org/wp-content/uploads/20230306120634/unnamed.jpg',
+// 'https://media.geeksforgeeks.org/wp-content/uploads/20230306120634/unnamed.jpg'
+//         ];
+
+//         const container = document.getElementById('image-container');
+//         images.forEach(image => {
+//             const img = document.createElement('img');
+//             img.src = image;
+//             container.appendChild(img);
+//         })
+//     </script>
