@@ -34,7 +34,25 @@ export async function fetchProfileInfo(url) {
     const { email, avatar, credits } = json;
     profileEmailHead.innerHTML = `${email}`;
     profileCredits.textContent = `${credits}`;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
+export async function fetchProfileAvatar(url) {
+  try {
+    const getData = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    const response = await fetch(url, getData);
+    const json = await response.json();
+    console.log(json);
+
+    const { avatar } = json;
     profileAvatar.src = `${avatar}`;
   } catch (error) {
     console.log(error);
@@ -53,7 +71,7 @@ export async function fetchHeaderProfileInfo(url) {
     const response = await fetch(url, getData);
     const json = await response.json();
     console.log(json);
-    const { email, avatar, credits } = json;
+    const { avatar, credits } = json;
     headerCredits.textContent = `${credits}`;
     headerAvatar.src = `${avatar}`;
   } catch (error) {
