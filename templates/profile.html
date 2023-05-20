@@ -38,8 +38,8 @@
                                 <a class="nav-link" href="login.html">Logout</a>
                             </li>
                         </ul>
-                        <div class="credit">Credits: 100,-</div>
-                        <a class="navbar-avatar" href="profile.html"><img src="../images/avatarDefault.png" alt=""></a>
+                        <div class="credit">Credits: <span class="headerCredits"></span>,-</div>
+                        <a class="navbar-avatar" href="profile.html"><img class="headerAvatar" src="" alt=""></a>
                     </div>
                 </div>
             </nav>
@@ -47,24 +47,24 @@
         <main class="col-12 d-flex justify-content-center align-items-center flex-column">
             <div class="breadcrumb">listings -> profile</div>
             <div class="displayMSG"></div>
-            <h1>Your Profile <div class="profileName"></div>
+            <h1>Your Profile
             </h1>
             <div class="container profileCont new-post col-6 col-lg-5">
                 <h2 class="profileName">USERNAME</h2>
 
                 <div class="mb-3 d-flex flex-column profileEmail">
-                    <div class="profileEmailHead fw-bold">Email:</div>
-                    <p>USERNAME@noroff.no</p>
+                    <div class="fw-bold">Email:</div>
+                    <p class="profileEmailHead">USERNAME@noroff.no</p>
 
                 </div>
                 <div class="mb-3 d-flex flex-column profileCredits">
                     <div class="profileEmailHead fw-bold">Credits:</div>
-                    <span>100,-</span>
+                    <div> <span class="credits"></span>,-</span></div>
 
                 </div>
-                <div class="mb-3 d-flex flex-column profileAvatar">
+                <div class="mb-3 d-flex flex-column ">
                     <span class="fw-bold">Avatar:</span>
-                    <img src="/images/ben-white-gEKMstKfZ6w-unsplash.jpg" class="img-thumbnail" alt="...">
+                    <img class="profileAvatar" src="../images/avatarDefault.png" alt="">
 
                 </div>
                 <a href="avatar.html"><button type="button" class="btn btn-primary">Edit avatar</button></a>

@@ -8,6 +8,8 @@ export const registerURL = `${API_BASE_URL}/api/v1/auction/auth/register`;
 export const signinURL = `${API_BASE_URL}/api/v1/auction/auth/login`;
 // authenticate endpoint
 
+export const profileURL = `${API_BASE_URL}/api/v1/auction/profiles/`;
+
 // create and get
 export const createAndGetURL = `${API_BASE_URL}/api/v1/social/posts?_author=true`;
 
@@ -68,3 +70,11 @@ export const btnMyPosts = document.querySelector(".btnMyPosts");
 export const myPost = document.querySelector(".myPost");
 
 // Profile
+
+export const profileName = document.querySelector(".profileName");
+export const profileEmailHead = document.querySelector(".profileEmailHead");
+export const profileCredits = document.querySelector(".credits");
+export const headerCredits = document.querySelector(".headerCredits");
+export const profileAvatar = document.querySelector(".profileAvatar");
+export const headerAvatar = document.querySelector(".headerAvatar");
+export const profileSpesificURL = `${profileURL}${userName}`;
