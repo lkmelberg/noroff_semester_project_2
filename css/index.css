@@ -18,3 +18,11 @@
 a {
   color: #000;
 }
+.listingAvatar {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10px;
+}
+.listingAvatar img {
+  object-fit: cover;
+}

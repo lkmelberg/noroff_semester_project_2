@@ -27,6 +27,7 @@ export async function fetchListings(url) {
       const listingDate = listing.endsAt.substring(0, 10);
       const listingTime = listing.endsAt.substring(11, 16);
       const listingSeller = seller.name;
+      const listingAvatar = seller.avatar;
       //   const listingTags = listing.tags;
       //   <p class="card-text">Tags:${listingTags}</p>;
 
@@ -82,7 +83,7 @@ export async function fetchListings(url) {
                                 <p class="card-text">Description: ${description}</p>
                                 <p>Deadline: ${listingDate} at ${listingTime}</p>
                                 <p>Asking Price:</p>
-                                <p>Seller: ${listingSeller}</p>
+                                <p>Seller: ${listingSeller} <img class="listingAvatar" src="${listingAvatar}" alt=""></p> 
                                 <a href="listing.html" class="btn btn-primary">see bids / add bid</a>
                             </div>
                         </div>

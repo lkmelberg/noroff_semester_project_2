@@ -59,11 +59,15 @@ body {
 .navbar-brand img {
   width: 80%;
   margin: 0px 20px 0px;
+  border-radius: 10px;
 }
 
 .navbar-avatar img {
-  max-height: 3rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10px;
   margin-right: 2rem;
+  object-fit: cover;
 }
 
 .navbarItems {
