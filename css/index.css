@@ -26,3 +26,9 @@ a {
 .listingAvatar img {
   object-fit: cover;
 }
+
+.img-thumbnail {
+  width: 50rem;
+  height: 20rem;
+  object-fit: cover;
+}
