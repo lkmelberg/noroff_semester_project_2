@@ -25,7 +25,6 @@ export function createListing(e) {
 
   const filteredImgArr = imgArr.filter((str) => str !== "");
 
-  console.log(filteredImgArr); // [ 'c', 'o', 'd', 'e' ]
   const listingData = {
     title: titleInput.value,
     description: descriptionInput.value,

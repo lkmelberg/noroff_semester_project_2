@@ -50,12 +50,12 @@
                 <form class="must-validate listingForm">
                     <div class="mb-3 d-flex flex-column">
                         <label for="titleInput" class="form-label">Item:</label>
-                        <input type="text" class="form-control" id="titleInput" aria-describedby="itemHelp" placeholder="Ex: Car">
+                        <input type="text" class="form-control" id="titleInput" required title="please enter item name" aria-describedby="itemHelp" placeholder="Ex: Car">
                         <div id="itemHelp" class="form-text">What are you selling?</div>
                     </div>
                     <div class="mb-3">
                         <label for="descriptionInput" class="form-label">Item Description:</label>
-                        <textarea class="form-control" id="descriptionInput" rows="3" placeholder="Ex: Condition, asking price ++"></textarea>
+                        <textarea required title="please enter item description" class="form-control" id="descriptionInput" rows="3" placeholder="Ex: Condition, asking price ++"></textarea>
                     </div>
 
                     <!-- <div class="input-group mb-3">
@@ -64,21 +64,22 @@
                     </div> -->
                     <div class="mb-3 d-flex flex-column">
                         <label for="mediaInput" class="form-label">Image URL:</label>
-                        <input type="url" class="form-control" id="mediaInput" placeholder="Ex: https://car.com/image.jpg">
+                        <input type="url" required title="please enter image URL" class="form-control" id="mediaInput" placeholder="Ex: https://car.com/image.jpg" aria-describedby="itemHelp">
+                        <div id="itemHelp" class="form-text">required</div>
 
                     </div>
                     <div class="mb-3 d-flex flex-column">
-                        <label for="mediaInput2" class="form-label">Image URL:</label>
-                        <input type="url" class="form-control" id="mediaInput2" placeholder="Ex: https://car.com/image.jpg">
-
+                        <label for="mediaInput2" class="form-label">Image 2 URL:</label>
+                        <input type="url" class="form-control" id="mediaInput2" placeholder="Ex: https://car.com/image.jpg" aria-describedby="itemHelp">
+                        <div id="itemHelp" class="form-text">optional</div>
                     </div>
                     <div class="mb-3 d-flex flex-column">
-                        <label for="mediaInput3" class="form-label">Image URL:</label>
-                        <input type="url" class="form-control" id="mediaInput3" placeholder="Ex: https://car.com/image.jpg">
-
+                        <label for="mediaInput3" class="form-label">Image 3 URL:</label>
+                        <input type="url" class="form-control" id="mediaInput3" placeholder="Ex: https://car.com/image.jpg" aria-describedby="itemHelp">
+                        <div id="itemHelp" class="form-text">optional</div>
                     </div>
                     <div class="mb-3">
-                        <label for="date">Deadline Date:</label>
+                        <label for="date">Auction Deadline:</label>
                         <input type="date" id="date">
                     </div>
                     <div class="btnCreateListing">
