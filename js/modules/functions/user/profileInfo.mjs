@@ -31,7 +31,7 @@ export async function fetchProfileInfo(url) {
     const json = await response.json();
     console.log(json);
 
-    const { email, avatar, credits } = json;
+    const { email, credits } = json;
     profileEmailHead.innerHTML = `${email}`;
     profileCredits.textContent = `${credits}`;
   } catch (error) {
