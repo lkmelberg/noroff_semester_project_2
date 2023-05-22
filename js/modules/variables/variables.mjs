@@ -98,5 +98,8 @@ export const getListingURL = `${API_BASE_URL}/api/v1/auction/listings/${id}?_sel
 export const bidItemCont = document.querySelector(".bidItemCont");
 export const listingBR = document.querySelector(".listingBR");
 export const getBidsUrl = `${API_BASE_URL}/api/v1/auction/listings/${id}?_seller=true&_bids=true`;
+export const placeBidURL = `${API_BASE_URL}/api/v1/auction/listings/${id}/bids`;
 export const bidCont = document.querySelector(".bidCont");
 export const bidsContHeader = document.querySelector(".bidsContHeader");
+export const bidForm = document.querySelector(".bidForm");
+export const placeBid = document.querySelector("#placeBid");

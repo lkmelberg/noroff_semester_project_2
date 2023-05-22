@@ -25,7 +25,7 @@ export function createListing(e) {
 
   const filteredImgArr = imgArr.filter((str) => str !== "");
 
-  const listingData = {
+  const listingDataInput = {
     title: titleInput.value,
     description: descriptionInput.value,
     media: filteredImgArr,
@@ -77,7 +77,7 @@ export function createListing(e) {
       }, 5000);
     }
   }
-  console.log(listingData);
+  console.log(listingDataInput);
   // Send a POST request to create a new post.
-  create(createListingURL, listingData);
+  create(createListingURL, listingDataInput);
 }
