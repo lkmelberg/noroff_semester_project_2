@@ -5,6 +5,7 @@ import {
   bidItemCont,
   loader,
   listingBR,
+  bidsContHeader,
 } from "../../variables/variables.mjs";
 
 /**
@@ -17,7 +18,7 @@ import {
  */
 export function getListing(listing, bidItemCont) {
   loader.classList.add("hide");
-  const { id, title, description, seller, media } = listing;
+  const { id, title, description, seller, media, _count } = listing;
   const listingDate = listing.endsAt.substring(0, 10);
   const listingTime = listing.endsAt.substring(11, 16);
   const listingSeller = seller.name;
@@ -25,6 +26,7 @@ export function getListing(listing, bidItemCont) {
 
   listingBR.textContent = title;
   listingTitle.textContent = title;
+  bidsContHeader.textContent = `Bids: ${_count.bids}`;
 
   const listingCol = document.createElement("div");
   listingCol.classList.add("col");
@@ -72,11 +74,6 @@ export function getListing(listing, bidItemCont) {
   sellerAvatar.setAttribute("alt", `${listingSeller}'s avatar`);
   sellerAvatar.src = listingAvatar;
 
-  const bidHigest = document.createElement("h3");
-  bidHigest.classList.add("highestBid");
-
-  bidHigest.textContent = `Current highest bid:`;
-
   bidItemCont.appendChild(listingCol);
   listingCol.appendChild(listingCard);
   listingCard.appendChild(imgCont);
@@ -87,7 +84,6 @@ export function getListing(listing, bidItemCont) {
   cardBody.appendChild(pDesc);
   cardBody.appendChild(pDeadline);
   cardBody.appendChild(pSeller);
-  cardBody.appendChild(bidHigest);
   pSeller.appendChild(sellerAvatar);
 }
 

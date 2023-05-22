@@ -2,7 +2,7 @@ import { listingsCont, loader, token } from "../../variables/variables.mjs";
 
 export function getListings(listing, listingsCont) {
   for (let i = 0; i < listing.length; i++) {
-    const { id, title, description, seller, media } = listing[i];
+    const { id, title, description, seller, media, _count } = listing[i];
     const listingDate = listing[i].endsAt.substring(0, 10);
     const listingTime = listing[i].endsAt.substring(11, 16);
     const listingSeller = seller.name;
@@ -59,6 +59,9 @@ export function getListings(listing, listingsCont) {
     sellerAvatar.setAttribute("alt", `${listingSeller}'s avatar`);
     sellerAvatar.src = listingAvatar;
 
+    const listingBids = document.createElement("p");
+    listingBids.textContent = `Bids: ${_count.bids}`;
+
     const bidLink = document.createElement("a");
     bidLink.classList.add("btn", "btn-primary");
     bidLink.href = `listing.html?id=${id}`;
@@ -74,6 +77,7 @@ export function getListings(listing, listingsCont) {
     cardBody.appendChild(pDesc);
     cardBody.appendChild(pDeadline);
     cardBody.appendChild(pSeller);
+    cardBody.appendChild(listingBids);
     cardBody.appendChild(bidLink);
     pSeller.appendChild(sellerAvatar);
   }
