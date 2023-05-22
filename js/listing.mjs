@@ -11,3 +11,6 @@ fetchListing(getListingURL);
 fetchBids(getBidsUrl);
 
 bidForm.addEventListener("submit", createBid);
+
+import { unregisteredRedirect } from "./modules/functions/user/notLoggedIn.mjs";
+unregisteredRedirect();

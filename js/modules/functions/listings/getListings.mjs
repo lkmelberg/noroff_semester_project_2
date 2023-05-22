@@ -7,13 +7,14 @@ export function getListings(listing, listingsCont) {
     const listingTime = listing[i].endsAt.substring(11, 16);
     const listingSeller = seller.name;
     const listingAvatar = seller.avatar;
-    // const listingImg = media[0];
+
+    loader.classList.add("hide");
 
     const listingCol = document.createElement("div");
     listingCol.classList.add("col");
 
     const listingCard = document.createElement("div");
-    listingCard.classList.add("card");
+    listingCard.classList.add("card", "cardMainDiv");
 
     const imgCont = document.createElement("div");
     imgCont.classList.add("card");
@@ -78,11 +79,23 @@ export function getListings(listing, listingsCont) {
     cardBody.appendChild(pDeadline);
     cardBody.appendChild(pSeller);
     cardBody.appendChild(listingBids);
-    cardBody.appendChild(bidLink);
-    pSeller.appendChild(sellerAvatar);
-  }
 
-  loader.classList.add("hide");
+    pSeller.appendChild(sellerAvatar);
+
+    if (token) {
+      const bidLink = document.createElement("a");
+      bidLink.classList.add("btn", "btn-primary");
+      bidLink.href = `listing.html?id=${id}`;
+      bidLink.textContent = "See bids / Add bid";
+      cardBody.appendChild(bidLink);
+    } else {
+      const NotLoggedIn = document.createElement("h6");
+      NotLoggedIn.classList.add("fw-bold");
+
+      NotLoggedIn.textContent = "Please Log in to be able to bid on items";
+      cardBody.appendChild(NotLoggedIn);
+    }
+  }
 }
 
 export async function fetchListings(url) {

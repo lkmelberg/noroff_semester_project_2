@@ -8,3 +8,6 @@ import { addProfileName } from "./modules/functions/user/profileInfo.mjs";
 addProfileName();
 fetchProfileAvatar(profileSpesificURL);
 updateAvatarForm.addEventListener("submit", updateAvatar);
+
+import { unregisteredRedirect } from "./modules/functions/user/notLoggedIn.mjs";
+unregisteredRedirect();

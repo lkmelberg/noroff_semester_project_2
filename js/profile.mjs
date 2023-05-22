@@ -14,3 +14,5 @@ fetchProfileAvatar(profileSpesificURL);
 import { fetchListings } from "./modules/functions/listings/getListings.mjs";
 
 fetchListings(profileListingsURL);
+import { unregisteredRedirect } from "./modules/functions/user/notLoggedIn.mjs";
+unregisteredRedirect();

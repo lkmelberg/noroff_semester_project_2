@@ -104,3 +104,10 @@ export const bidCont = document.querySelector(".bidCont");
 export const bidsContHeader = document.querySelector(".bidsContHeader");
 export const bidForm = document.querySelector(".bidForm");
 export const placeBid = document.querySelector("#placeBid");
+
+export const listingsNav = document.querySelector(".listingsNav");
+export const profileNav = document.querySelector(".profileNav");
+export const creditNav = document.querySelector(".creditNav");
+export const navbarAvatar = document.querySelector(".navbar-avatar");
+export const searchH1 = document.querySelector(".searchH1");
+export const navbarNav = document.querySelector(".navbar-nav");

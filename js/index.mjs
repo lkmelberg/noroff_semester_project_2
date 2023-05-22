@@ -8,3 +8,6 @@ addProfileName();
 
 fetchListings(getListingsURL);
 listingForm.addEventListener("submit", createListing);
+
+import { unregisteredRedirect } from "./modules/functions/user/notLoggedIn.mjs";
+unregisteredRedirect();

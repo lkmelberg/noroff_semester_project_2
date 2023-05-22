@@ -23,19 +23,19 @@
                     <div class="collapse navbar-collapse navbarItems" id="navbarTogglerDemo02">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link " href="index.html">Listings</a>
+                                <a class="nav-link listingsNav" href="index.html">Listings</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="search.html">Search</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="profile.html">Profile</a>
+                                <a class="nav-link profileNav" href="profile.html">Profile</a>
                             </li>
                             <li class="nav-item logout">
                                 <a class="nav-link" href="login.html">Logout</a>
                             </li>
                         </ul>
-                        <div class="credit">Credits: <span class="headerCredits"></span>,-</div>
+                        <div class="credit creditNav">Credits: <span class="headerCredits"></span>,-</div>
                         <a class="navbar-avatar" href="profile.html"><img class="headerAvatar" src="" alt=""></a>
                     </div>
                 </div>
@@ -44,14 +44,14 @@
         <main class="col-12 d-flex justify-content-center align-items-center flex-column">
             <div class="breadcrumb"></div>
             <div class="displayMSG"></div>
-            <h1>Search listings <div class="profileName"></div>
+            <h1 class="searchH1">Search through listings below<div class="profileName"></div>
             </h1>
             <form class="d-flex searchForm" role="search">
                 <input class="form-control me-2 searchInput" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             <div class="container list-post col-8 col-lg-5 justify-content-center align-items-center">
-                <h2>Search Results:</h2>
+                <h2>Listings: </h2>
 
 
             </div>
@@ -59,7 +59,7 @@
             <div class="loader">
                 <p>Loading posts, please wait...</p>
             </div>
-            <div class="listingsCont searchResults">
+            <div class="listingsCont row row-cols-1 row-cols-md-2 g-4 searchResults">
 
             </div>
         </main>
@@ -88,7 +88,6 @@
         </footer>
 
 
-        <script src="/js/script.mjs" type="module"></script>
         <script src="/js/search.mjs" type="module"></script>
 
     </body>
