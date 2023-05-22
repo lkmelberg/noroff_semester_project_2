@@ -3,18 +3,24 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e0970ec5-601f-42a4-80c7-14c8bae6da7f/deploy-status)](https://app.netlify.com/sites/splendid-rabanadas-10d73c/deploys)
 
 Github Projects gantt chart - https://github.com/users/lkmelberg/projects/2/views/6
+
 Design prototype & style guide - https://www.figma.com/file/1ux4GLGxHMBUV48ZSOSnhE/melberg_semester_project_2?type=design&node-id=0%3A1&t=zO7dHWCDWvFwJPOA-1
+
 Kanban board - https://github.com/users/lkmelberg/projects/2
+
 Repository - https://github.com/lkmelberg/noroff_semester_project_2
+
 Deployed Demo - https://main--splendid-rabanadas-10d73c.netlify.app
 
 # further development
 
 to work on this project you need to run these commands:
 
+```
 git clone git@github.com:lkmelberg/noroff_semester_project_2.git
 npm install
 
+```
 # Goal
 
 To take the skills learned over the past three semesters and create an auction website.
