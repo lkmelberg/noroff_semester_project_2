@@ -1,9 +1,4 @@
-import {
-  listingsCont,
-  getListingsURL,
-  loader,
-  token,
-} from "../../variables/variables.mjs";
+import { listingsCont, loader, token } from "../../variables/variables.mjs";
 
 export function getListings(listing, listingsCont) {
   for (let i = 0; i < listing.length; i++) {

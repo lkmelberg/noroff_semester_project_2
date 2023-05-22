@@ -93,3 +93,7 @@ export const listingForm = document.querySelector(".listingForm");
 export const queryString = document.location.search;
 export const params = new URLSearchParams(queryString);
 export const id = params.get("id");
+export const listingTitle = document.querySelector(".listingTitle");
+export const getListingURL = `${API_BASE_URL}/api/v1/auction/listings/${id}?_seller=true`;
+export const bidItemCont = document.querySelector(".bidItemCont");
+export const listingBR = document.querySelector(".listingBR");
