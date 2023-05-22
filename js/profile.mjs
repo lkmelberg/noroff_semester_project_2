@@ -1,4 +1,7 @@
-import { profileSpesificURL } from "./modules/variables/variables.mjs";
+import {
+  profileSpesificURL,
+  profileListingsURL,
+} from "./modules/variables/variables.mjs";
 import {
   fetchProfileInfo,
   fetchProfileAvatar,
@@ -7,3 +10,7 @@ import { addProfileName } from "./modules/functions/user/profileInfo.mjs";
 addProfileName();
 fetchProfileInfo(profileSpesificURL);
 fetchProfileAvatar(profileSpesificURL);
+
+import { fetchListings } from "./modules/functions/listings/getListings.mjs";
+
+fetchListings(profileListingsURL);
