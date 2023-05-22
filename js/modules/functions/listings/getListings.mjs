@@ -19,7 +19,7 @@ export async function fetchListings(url) {
     const json = await response.json();
     console.log(json);
 
-    listingsCont.innerHTML = "";
+    listingsCont.textContent = "";
 
     //   all listings
     json.forEach(function (listing) {

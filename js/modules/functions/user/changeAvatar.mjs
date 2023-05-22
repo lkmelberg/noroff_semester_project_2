@@ -1,24 +1,3 @@
-// import { token, profileAvatar } from "../../variables/variables.mjs";
-
-// export async function fetchAvatar(url) {
-//   try {
-//     const getData = {
-//       method: "GET",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Authorization: `Bearer ${token}`,
-//       },
-//     };
-//     const response = await fetch(url, getData);
-//     const json = await response.json();
-//     console.log(json);
-
-//     const { avatar } = json;
-//     profileAvatar.src = `${avatar}`;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
 import {
   token,
   avatarReg,
@@ -50,19 +29,19 @@ export function updateAvatar(e) {
       console.log(response);
       const json = await response.json();
       console.log(json);
-      displayMSG.innerHTML = `<div class="postSuccess">Avatar updated! Please wait</div>`;
+      displayMSG.textContent = `<div class="postSuccess">Avatar updated! Please wait</div>`;
       updateAvatarForm.reset();
       setTimeout(function () {
-        displayMSG.innerHTML = "";
+        displayMSG.textContent = "";
         location.reload();
       }, 2500);
       return json;
     } catch (error) {
       console.log(error);
-      displayMSG.innerHTML = `<div class="postError">Avatar not updated, Sorry about that. Try again or come back later :() </div>`;
+      displayMSG.textContent = `<div class="postError">Avatar not updated, Sorry about that. Try again or come back later :() </div>`;
       updateAvatarForm.reset();
       setTimeout(function () {
-        displayMSG.innerHTML = "";
+        displayMSG.textContent = "";
       }, 5000);
     }
   }

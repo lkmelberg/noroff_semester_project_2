@@ -13,7 +13,7 @@ import {
  */
 
 export function addProfileName() {
-  profileName.innerHTML = `${userName}`;
+  profileName.textContent = `${userName}`;
 }
 
 // addProfileName();
@@ -32,7 +32,7 @@ export async function fetchProfileInfo(url) {
     console.log(json);
 
     const { email, credits } = json;
-    profileEmailHead.innerHTML = `${email}`;
+    profileEmailHead.textContent = `${email}`;
     profileCredits.textContent = `${credits}`;
   } catch (error) {
     console.log(error);

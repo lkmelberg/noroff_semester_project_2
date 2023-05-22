@@ -39,14 +39,14 @@ export function signin(e) {
       console.log(json);
       console.log(accessToken);
       if (accessToken !== undefined && response.ok) {
-        displayMSG.innerHTML = `<div class="signinSuccess">Sign In Successful - Redirecting</div>`;
+        displayMSG.textContent = `<div class="signinSuccess">Sign In Successful - Redirecting</div>`;
         setTimeout(function () {
           window.location.href = `index.html`;
         }, 2500);
       } else if (accessToken === undefined) {
-        displayMSG.innerHTML = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
+        displayMSG.textContent = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
       } else {
-        displayMSG.innerHTML = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
+        displayMSG.textContent = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
       }
       return json;
     } catch (error) {

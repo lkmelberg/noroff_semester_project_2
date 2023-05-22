@@ -54,17 +54,17 @@ export function register(e) {
         responseAfter.status >= 200 &&
         responseAfter.status <= 299
       ) {
-        displayMSG.innerHTML = `<div class="registerSuccess">Your account has been created, redirecting...</div>`;
+        displayMSG.textContent = `<div class="registerSuccess">Your account has been created, redirecting...</div>`;
         regForm.reset();
         setTimeout(function () {
           window.location.href = `login.html`;
         }, 2500);
       } else {
-        displayMSG.innerHTML = `<div class="registerError"><div class="registerErrorTop">Your registration failed, try again.</div><p>Make sure your email address ends with @noroff.no and your password is at least 8 characters<p></div>`;
+        displayMSG.textContent = `<div class="registerError"><div class="registerErrorTop">Your registration failed, try again.</div><p>Make sure your email address ends with @noroff.no and your password is at least 8 characters<p></div>`;
         regForm.reset();
       }
       // if (responseAfter.ok === false && responseAfter.status === 404) {
-      //   displayMSG.innerHTML = `<div class="registerSuccess">Your account has been deleted</div>`;
+      //   displayMSG.textContent = `<div class="registerSuccess">Your account has been deleted</div>`;
       //   regForm.reset();
       // }
 
