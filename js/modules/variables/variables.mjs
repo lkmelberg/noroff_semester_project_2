@@ -111,3 +111,4 @@ export const creditNav = document.querySelector(".creditNav");
 export const navbarAvatar = document.querySelector(".navbar-avatar");
 export const searchH1 = document.querySelector(".searchH1");
 export const navbarNav = document.querySelector(".navbar-nav");
+export const hamburgerBtn = document.querySelector("#hamburgerBtn");
