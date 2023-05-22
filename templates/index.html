@@ -47,27 +47,36 @@
             </h1>
             <div class="container newItemCont new-post col-6 col-lg-5">
                 <h2>Create New Listing</h2>
-                <form>
+                <form class="must-validate listingForm">
                     <div class="mb-3 d-flex flex-column">
-                        <label for="listingItem" class="form-label">Item:</label>
-                        <input type="text" class="form-control" id="listingItem" aria-describedby="itemHelp">
+                        <label for="titleInput" class="form-label">Item:</label>
+                        <input type="text" class="form-control" id="titleInput" aria-describedby="itemHelp" placeholder="Ex: Car">
                         <div id="itemHelp" class="form-text">What are you selling?</div>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Item Description:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <!-- <div class="input-group">
-                        <label for="askingPrice" class="form-label">Asking Price:</label>
-                        <input id="askingPrice" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-                        <span class="input-group-text">$</span>
-                        <span class="input-group-text">0.00</span>
-                    </div> -->
-                    <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile02">
-                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                        <label for="descriptionInput" class="form-label">Item Description:</label>
+                        <textarea class="form-control" id="descriptionInput" rows="3" placeholder="Ex: Condition, asking price ++"></textarea>
                     </div>
 
+                    <!-- <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile02">
+                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                    </div> -->
+                    <div class="mb-3 d-flex flex-column">
+                        <label for="mediaInput" class="form-label">Image URL:</label>
+                        <input type="url" class="form-control" id="mediaInput" placeholder="Ex: https://car.com/image.jpg">
+
+                    </div>
+                    <div class="mb-3 d-flex flex-column">
+                        <label for="mediaInput2" class="form-label">Image URL:</label>
+                        <input type="url" class="form-control" id="mediaInput2" placeholder="Ex: https://car.com/image.jpg">
+
+                    </div>
+                    <div class="mb-3 d-flex flex-column">
+                        <label for="mediaInput3" class="form-label">Image URL:</label>
+                        <input type="url" class="form-control" id="mediaInput3" placeholder="Ex: https://car.com/image.jpg">
+
+                    </div>
                     <div class="mb-3">
                         <label for="date">Deadline Date:</label>
                         <input type="date" id="date">

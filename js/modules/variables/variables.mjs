@@ -80,5 +80,16 @@ export const headerAvatar = document.querySelector(".headerAvatar");
 export const profileSpesificURL = `${profileURL}${userName}`;
 export const updateAvatarURL = `${API_BASE_URL}/api/v1/auction/profiles/${userName}/media`;
 export const updateAvatarForm = document.querySelector(".updateAvatarForm");
-export const getListingsURL = `${API_BASE_URL}/api/v1/auction/listings?_seller=true&sort=created`;
+export const getListingsURL = `${API_BASE_URL}/api/v1/auction/listings?_seller=true&sort=created&_active=true`;
+export const createListingURL = `${API_BASE_URL}/api/v1/auction/listings`;
 export const listingsCont = document.querySelector(".listingsCont");
+
+export const titleInput = document.querySelector("#titleInput");
+export const descriptionInput = document.querySelector("#descriptionInput");
+export const mediaInput = document.querySelector("#mediaInput");
+export const mediaInput3 = document.querySelector("#mediaInput3");
+export const mediaInput2 = document.querySelector("#mediaInput2");
+
+export const dateInput = document.querySelector("#date");
+
+export const listingForm = document.querySelector(".listingForm");
