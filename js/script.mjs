@@ -1,15 +1,15 @@
-import { logOut } from "./modules/functions/user/logout.mjs";
 import {
   logoutBtn,
   profileSpesificURL,
   hamburgerBtn,
 } from "./modules/variables/variables.mjs";
 import { fetchHeaderProfileInfo } from "./modules/functions/user/profileInfo.mjs";
-
+import { unregisteredRedirect } from "./modules/functions/user/notLoggedIn.mjs";
 import { toggleMenu } from "./modules/functions/hamburger.mjs";
+import { logOut } from "./modules/functions/user/logout.mjs";
 
-logoutBtn.addEventListener("click", logOut);
-
+unregisteredRedirect();
 fetchHeaderProfileInfo(profileSpesificURL);
 
 hamburgerBtn.addEventListener("click", toggleMenu);
+logoutBtn.addEventListener("click", logOut);
