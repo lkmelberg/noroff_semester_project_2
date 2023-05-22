@@ -35,7 +35,7 @@ a {
   gap: 1rem;
 }
 .cardGallery img {
-  width: 6rem;
-  height: 8rem;
+  width: 9rem;
+  height: 10rem;
   object-fit: cover;
 }

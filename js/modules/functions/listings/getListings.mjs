@@ -27,21 +27,21 @@ export function getListings(listing, listingsCont) {
     imgRow.classList.add("row");
 
     const imgCol = document.createElement("div");
-    imgCol.classList.add("cardGallery", "col-lg-4", "col-md-12", "mb-lg-0");
+    imgCol.classList.add("cardGallery");
 
-    media.forEach((media) => {
-      const img = document.createElement("img");
-      img.classList.add("shadow-1-strong", "rounded");
-      img.setAttribute("alt", `${title} listing image`);
-      img.src = media;
-      imgCol.appendChild(img);
-    });
-
-    // const listingImgs = document.createElement("img");
-    // listingImgs.classList.add("img-thumbnail");
-    // listingImgs.setAttribute("alt", `${title} listing image`);
-    // listingImgs.src = listingImg;
-
+    if (media.length === 0) {
+      const noImage = document.createElement("p");
+      noImage.textContent = `No Image Available`;
+      imgCol.appendChild(noImage);
+    } else {
+      media.forEach((media) => {
+        const img = document.createElement("img");
+        img.classList.add("shadow-1-strong", "rounded");
+        img.setAttribute("alt", `${title} listing image`);
+        img.src = media;
+        imgCol.appendChild(img);
+      });
+    }
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
 
@@ -113,18 +113,3 @@ export function getAll(e) {
     console.log(error);
   }
 }
-
-//     <script>
-//         const images = [
-// 'https://media.geeksforgeeks.org/wp-content/uploads/20230306120634/unnamed.jpg',
-// 'https://media.geeksforgeeks.org/wp-content/uploads/20230306120634/unnamed.jpg',
-// 'https://media.geeksforgeeks.org/wp-content/uploads/20230306120634/unnamed.jpg'
-//         ];
-
-//         const container = document.getElementById('image-container');
-//         images.forEach(image => {
-//             const img = document.createElement('img');
-//             img.src = image;
-//             container.appendChild(img);
-//         })
-//     </script>
