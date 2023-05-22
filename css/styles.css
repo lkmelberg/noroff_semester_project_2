@@ -187,14 +187,3 @@ a {
   height: 10rem;
   object-fit: cover;
 }
-
-@media screen and (max-width: 600px) {
-  .updateForm {
-    max-width: 25rem;
-  }
-}
-@media screen and (max-width: 420px) {
-  .updateForm {
-    max-width: 15rem;
-  }
-}
