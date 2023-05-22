@@ -105,11 +105,11 @@ export async function fetchListings(url) {
     console.log(error);
   }
 }
-export function getAll(e) {
-  e.preventDefault();
-  try {
-    fetchListings(getListingsURL);
-  } catch (error) {
-    console.log(error);
-  }
-}
+// export function getAll(e) {
+//   e.preventDefault();
+//   try {
+//     fetchListings(getListingsURL);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
