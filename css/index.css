@@ -27,8 +27,15 @@ a {
   object-fit: cover;
 }
 
-.img-thumbnail {
-  width: 50rem;
-  height: 20rem;
+.cardGallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.cardGallery img {
+  width: 6rem;
+  height: 8rem;
   object-fit: cover;
 }
