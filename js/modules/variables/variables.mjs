@@ -13,6 +13,7 @@ export const registerURL = `${API_BASE_URL}/api/v1/auction/auth/register`;
 export const signinURL = `${API_BASE_URL}/api/v1/auction/auth/login`;
 
 // profile endpoints
+export const userName = localStorage.getItem("userName");
 export const profileURL = `${API_BASE_URL}/api/v1/auction/profiles/`;
 export const profileSpesificURL = `${profileURL}${userName}`;
 export const updateAvatarURL = `${API_BASE_URL}/api/v1/auction/profiles/${userName}/media`;
@@ -29,7 +30,7 @@ export const placeBidURL = `${API_BASE_URL}/api/v1/auction/listings/${id}/bids`;
 
 // common
 export const token = localStorage.getItem("accessToken");
-export const userName = localStorage.getItem("userName");
+
 export const displayMSG = document.querySelector(".displayMSG");
 export const loader = document.querySelector(".loader");
 export const listingTitle = document.querySelector(".listingTitle");

@@ -5,10 +5,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>LeafTrade - Search</title>
-        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/search.css">
+        <title>LeafTrade - Edit Avatar</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/index.css">
+
+        <link rel="stylesheet" href="css/profile.css">
+
         <script src="https://kit.fontawesome.com/cf5488008f.js" crossorigin="anonymous"></script>
     </head>
 
@@ -16,52 +19,65 @@
         <Header>
             <nav class="navbar navbar-dark fixed-top navbar-expand-sm bg-body-tertiary bg-dark">
                 <div class="container-fluid ">
-                    <a class="navbar-brand" href="index.html"><img src="../images/leafTradeLogoLight.png" alt="logo image"></a>
+                    <a class="navbar-brand" href="index.html"><img src="images/leafTradeLogoLight.png" alt="logo image"></a>
                     <button class="navbar-toggler" id="hamburgerBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse navbarItems" id="navbarTogglerDemo02">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link listingsNav" href="index.html">Listings</a>
+                                <a class="nav-link " href="index.html">Listings</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="search.html">Search</a>
+                                <a class="nav-link" href="search.html">Search</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link profileNav" href="profile.html">Profile</a>
+                                <a class="nav-link active" aria-current="page" href="profile.html">Profile</a>
                             </li>
                             <li class="nav-item logout">
                                 <a class="nav-link" href="login.html">Logout</a>
                             </li>
                         </ul>
-                        <div class="credit creditNav">Credits: <span class="headerCredits"></span>,-</div>
+                        <div class="credit">Credits: <span class="headerCredits"></span>,-</div>
                         <a class="navbar-avatar" href="profile.html"><img class="headerAvatar" src="" alt=""></a>
+
+
+
                     </div>
                 </div>
             </nav>
         </Header>
         <main class="col-12 d-flex justify-content-center align-items-center flex-column">
-            <div class="breadcrumb"></div>
+            <div class="breadcrumb"><a href="profile.html">profile</a> -> <span>edit avatar</span></div>
             <div class="displayMSG"></div>
-            <h1 class="searchH1">Search through listings below<div class="profileName"></div>
+            <h1>Edit Avatar
             </h1>
-            <form class="d-flex searchForm" role="search">
-                <input class="form-control me-2 searchInput" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <div class="container list-post col-8 col-lg-5 justify-content-center align-items-center">
-                <h2>Listings: </h2>
+            <div class="container profileCont new-post col-6 col-lg-5">
+                <h2 class="profileName">USERNAME</h2>
 
+
+                <div class="mb-3 d-flex flex-column ">
+                    <span class="fw-bold">Current Avatar:</span>
+                    <img class="profileAvatar" src="images/avatarDefault.png" alt="">
+
+                </div>
+                <form class="must-validate updateAvatarForm regForm">
+
+                    <div class="form-floating">
+                        <input type="url" class="form-control avatarReg" id="avatarReg" required placeholder="avatarReg">
+                        <label for="AvatarReg">New AvatarURL</label>
+                    </div>
+
+
+                    <button class="w-100 btn btn-lg btn-primary btnAvatar" type="submit">Change Avatar</button>
+
+
+
+
+                </form>
 
             </div>
 
-            <div class="loader">
-                <p>Loading posts, please wait...</p>
-            </div>
-            <div class="listingsCont row row-cols-1 row-cols-md-2 g-4 searchResults">
-
-            </div>
         </main>
 
         <footer id="footer" class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -74,21 +90,12 @@
                 <span class="mb-3 mb-md-0 text-muted">© 2023 LeafTrade Inc</span>
             </div>
 
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a></li>
-            </ul>
+
         </footer>
 
+        <script src="js/script.mjs" type="module"></script>
+        <script src="js/avatar.mjs" type="module"></script>
 
-        <script src="/js/search.mjs" type="module"></script>
 
     </body>
 
