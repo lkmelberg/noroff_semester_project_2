@@ -11,31 +11,3 @@
   border: #4caf50 1em solid;
   border-radius: 5px;
 }
-.listingsCont {
-  margin: 2rem;
-}
-
-a {
-  color: #000;
-}
-.listingAvatar {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 10px;
-}
-.listingAvatar img {
-  object-fit: cover;
-}
-
-.cardGallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-.cardGallery img {
-  width: 9rem;
-  height: 10rem;
-  object-fit: cover;
-}
