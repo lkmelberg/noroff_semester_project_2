@@ -29,7 +29,10 @@ export function updateAvatar(e) {
       console.log(response);
       const json = await response.json();
       console.log(json);
-      displayMSG.textContent = `<div class="postSuccess">Avatar updated! Please wait</div>`;
+      const updatedAvatar = document.createElement("div");
+      updatedAvatar.classList.add("postSuccess");
+      updatedAvatar.textContent = `Avatar updated! Please wait`;
+      displayMSG.appendChild(updatedAvatar);
       updateAvatarForm.reset();
       setTimeout(function () {
         displayMSG.textContent = "";
@@ -38,7 +41,11 @@ export function updateAvatar(e) {
       return json;
     } catch (error) {
       console.log(error);
-      displayMSG.textContent = `<div class="postError">Avatar not updated, Sorry about that. Try again or come back later :() </div>`;
+      const notUpdated = document.createElement("div");
+      notUpdated.classList.add("postError");
+      notUpdated.textContent = `Avatar not updated, Sorry about that. Try again or come back later :(`;
+      displayMSG.appendChild(notUpdated);
+
       updateAvatarForm.reset();
       setTimeout(function () {
         displayMSG.textContent = "";

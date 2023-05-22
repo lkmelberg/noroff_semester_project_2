@@ -39,15 +39,34 @@ export function signin(e) {
       console.log(json);
       console.log(accessToken);
       if (accessToken !== undefined && response.ok) {
-        displayMSG.textContent = `<div class="signinSuccess">Sign In Successful - Redirecting</div>`;
+        const signInOK = document.createElement("div");
+        signInOK.classList.add("signinSuccess");
+        signInOK.textContent = `Sign In Successful - Redirecting`;
+        displayMSG.appendChild(signInOK);
         setTimeout(function () {
           window.location.href = `index.html`;
         }, 2500);
       } else if (accessToken === undefined) {
-        displayMSG.textContent = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
-      } else {
-        displayMSG.textContent = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
+        const signInNotOK = document.createElement("div");
+        signInNotOK.classList.add("signinError");
+        const signInNotOKtop = document.createElement("div");
+        signInNotOKtop.classList.add("signinErrorTop");
+        signInNotOKtop.textContent = "Sign In failed";
+        const signInNotOKbottom = document.createElement("div");
+        signInNotOKbottom.classList.add("signinErrorBottom");
+        signInNotOKbottom.textContent = "Try again or register an account";
+
+        displayMSG.appendChild(signInNotOK);
+        signInNotOK.appendChild(signInNotOKtop);
+        signInNotOK.appendChild(signInNotOKbottom);
       }
+      // else {
+      //   const signInNotOK = document.createElement("div");
+      //   signInNotOK.classList.add("postError");
+      //   signInNotOK.textContent = `Listing not created, Sorry about that. Try again or come back later :(`;
+      //   displayMSG.appendChild(signInNotOK);
+      //   displayMSG.textContent = `<div class="signinError"><div class="signinErrorTop">Sign In failed</div><div>Try again or register an account</div></div>`;
+      // }
       return json;
     } catch (error) {
       console.log(error);

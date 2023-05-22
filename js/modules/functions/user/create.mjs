@@ -54,13 +54,30 @@ export function register(e) {
         responseAfter.status >= 200 &&
         responseAfter.status <= 299
       ) {
-        displayMSG.textContent = `<div class="registerSuccess">Your account has been created, redirecting...</div>`;
+        const registerOK = document.createElement("div");
+        registerOK.classList.add("registerSuccess");
+        registerOK.textContent = `Your account has been created, redirecting...`;
+        displayMSG.appendChild(registerOK);
+
         regForm.reset();
         setTimeout(function () {
           window.location.href = `login.html`;
         }, 2500);
       } else {
-        displayMSG.textContent = `<div class="registerError"><div class="registerErrorTop">Your registration failed, try again.</div><p>Make sure your email address ends with @noroff.no and your password is at least 8 characters<p></div>`;
+        const registerNotOK = document.createElement("div");
+        registerNotOK.classList.add("registerError");
+        const registerNotOKtop = document.createElement("div");
+        registerNotOKtop.classList.add("registerErrorTop");
+        registerNotOKtop.textContent = "Your registration failed, try again.";
+        const registerNotOKbottom = document.createElement("p");
+
+        registerNotOKbottom.textContent =
+          "Make sure your email address ends with @noroff.no and your password is at least 8 characters";
+
+        displayMSG.appendChild(registerNotOK);
+        registerNotOK.appendChild(registerNotOKtop);
+        registerNotOK.appendChild(registerNotOKbottom);
+
         regForm.reset();
       }
       // if (responseAfter.ok === false && responseAfter.status === 404) {

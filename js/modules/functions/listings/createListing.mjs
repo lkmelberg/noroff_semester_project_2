@@ -54,20 +54,27 @@ export function createListing(e) {
       console.log(response);
       const json = await response.json();
       console.log(json);
-      displayMSG.textCreate = `<div class="postSuccess">Listing created!</div>`;
+      const createdDiv = document.createElement("div");
+      createdDiv.classList.add("postSuccess");
+      createdDiv.textContent = `Listing created!`;
+      displayMSG.appendChild(createdDiv);
       // listingForm.reset();
       setTimeout(function () {
-        displayMSG.textCreate = "";
+        displayMSG.textContent = "";
         location.reload();
-      }, 15000);
+      }, 2500);
       return json;
     } catch (error) {
       console.log(error);
-      displayMSG.textCreate = `<div class="postError">Listing not created, Sorry about that. Try again or come back later :(</div>`;
+      const notCreatedDiv = document.createElement("div");
+      notCreatedDiv.classList.add("postError");
+      notCreatedDiv.textContent = `Listing not created, Sorry about that. Try again or come back later :(`;
+      displayMSG.appendChild(notCreatedDiv);
+
       // listingForm.reset();
       setTimeout(function () {
-        displayMSG.textCreate = "";
-      }, 15000);
+        displayMSG.textContent = "";
+      }, 5000);
     }
   }
   console.log(listingData);

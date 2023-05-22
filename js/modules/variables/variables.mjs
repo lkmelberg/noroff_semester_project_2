@@ -14,10 +14,6 @@ export const profileURL = `${API_BASE_URL}/api/v1/auction/profiles/`;
 export const createAndGetURL = `${API_BASE_URL}/api/v1/social/posts?_author=true`;
 
 // edit and delete
-export const queryString = document.location.search;
-export const params = new URLSearchParams(queryString);
-export const id = params.get("id");
-export const updateAndDeleteURL = `${API_BASE_URL}/api/v1/social/posts/${id}?_author=true`;
 
 // common
 export const token = localStorage.getItem("accessToken");
@@ -93,3 +89,7 @@ export const mediaInput2 = document.querySelector("#mediaInput2");
 export const dateInput = document.querySelector("#date");
 
 export const listingForm = document.querySelector(".listingForm");
+
+export const queryString = document.location.search;
+export const params = new URLSearchParams(queryString);
+export const id = params.get("id");
