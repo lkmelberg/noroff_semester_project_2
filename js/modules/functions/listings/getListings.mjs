@@ -21,7 +21,7 @@ export async function fetchListings(url) {
 
     listingsCont.innerHTML = "";
 
-    //   all listing
+    //   all listings
     json.forEach(function (listing) {
       const { id, title, description, seller, bids, media } = listing;
       const listingDate = listing.endsAt.substring(0, 10);
@@ -30,22 +30,57 @@ export async function fetchListings(url) {
       const listingAvatar = seller.avatar;
       const listingImg = media[0];
 
-      listingsCont.innerHTML += `<div class="col">
-                    <a href="listing.html?id=${id}">
-                        <div class="card ">
-                     
-                      <img src="${listingImg}" class="img-thumbnail" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Item: ${title}</h5>
-                                <p class="card-text">Description: ${description}</p>
-                                <p>Deadline: ${listingDate} at ${listingTime}</p>
-                                <p>Asking Price:</p>
-                                <p>Seller: ${listingSeller} <img class="listingAvatar" src="${listingAvatar}" alt=""></p> 
-                                <a href="listing.html" class="btn btn-primary">see bids / add bid</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>`;
+      const listingCol = document.createElement("div");
+      listingCol.classList.add("col");
+
+      const listingCard = document.createElement("div");
+      listingCard.classList.add("card");
+
+      const imgCont = document.createElement("div");
+      imgCont.classList.add("card");
+
+      const listingImgs = document.createElement("img");
+      listingImgs.classList.add("img-thumbnail");
+      listingImgs.setAttribute("alt", `${title} listing image`);
+      listingImgs.src = listingImg;
+
+      const cardBody = document.createElement("div");
+      cardBody.classList.add("card-body");
+
+      const h5Title = document.createElement("h5");
+      h5Title.classList.add("card-title");
+      h5Title.textContent = `Item: ${title}`;
+
+      const pDesc = document.createElement("p");
+      pDesc.classList.add("card-text");
+      pDesc.textContent = `Description: ${description}`;
+
+      const pDeadline = document.createElement("p");
+      pDeadline.textContent = `Deadline: ${listingDate} at ${listingTime}`;
+
+      const pSeller = document.createElement("p");
+      pSeller.textContent = `Seller: ${listingSeller}`;
+
+      const sellerAvatar = document.createElement("img");
+      sellerAvatar.classList.add("listingAvatar");
+      sellerAvatar.setAttribute("alt", `${listingSeller}'s avatar`);
+      sellerAvatar.src = listingAvatar;
+
+      const bidLink = document.createElement("a");
+      bidLink.classList.add("btn", "btn-primary");
+      bidLink.href = `listing.html?id=${id}`;
+      bidLink.textContent = "See bids / Add bid";
+
+      listingsCont.appendChild(listingCol);
+      listingCol.appendChild(listingCard);
+      listingCard.appendChild(listingImgs);
+      listingCard.appendChild(cardBody);
+      cardBody.appendChild(h5Title);
+      cardBody.appendChild(pDesc);
+      cardBody.appendChild(pDeadline);
+      cardBody.appendChild(pSeller);
+      cardBody.appendChild(bidLink);
+      pSeller.appendChild(sellerAvatar);
     });
 
     loader.classList.add("hide");
