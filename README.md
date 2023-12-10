@@ -1,31 +1,52 @@
-# noroff_semester_project_2
+# Semester Project 2 - Noroff VOC
+
+This was my second semester project for my frontend degree from noroff. We were to use what we have learned so far in our studies and apply it to the project. The site is an auction site, and we were to use a CSS framework, and a given api.
+
+  <img src="/images/preview.png"  />
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e0970ec5-601f-42a4-80c7-14c8bae6da7f/deploy-status)](https://app.netlify.com/sites/splendid-rabanadas-10d73c/deploys)
 
-Github Projects gantt chart - https://github.com/users/lkmelberg/projects/2/views/6
+[Github Projects gantt chart](https://github.com/users/lkmelberg/projects/2/views/6)
+[Design prototype & style guide](https://www.figma.com/file/1ux4GLGxHMBUV48ZSOSnhE/melberg_semester_project_2?type=design&node-id=0%3A1&t=zO7dHWCDWvFwJPOA-1)
+[Kanban board](https://github.com/users/lkmelberg/projects/2)
+[Repository](https://github.com/lkmelberg/noroff_semester_project_2)
+[Deployed Demo](https://main--splendid-rabanadas-10d73c.netlify.app)
 
-Design prototype & style guide - https://www.figma.com/file/1ux4GLGxHMBUV48ZSOSnhE/melberg_semester_project_2?type=design&node-id=0%3A1&t=zO7dHWCDWvFwJPOA-1
+## Built With
 
-Kanban board - https://github.com/users/lkmelberg/projects/2
+- [Bootstrap](https://getbootstrap.com/)
 
-Repository - https://github.com/lkmelberg/noroff_semester_project_2
+### Installing
 
-Deployed Demo - https://main--splendid-rabanadas-10d73c.netlify.app
+To open the repo on your local machine:
 
-# further development
+1. Clone the repo:
 
-to work on this project you need to run these commands:
-
+```bash
+git clone git@github.com:lkmelberg/noroff_examProject2.git
 ```
-git clone git@github.com:lkmelberg/noroff_semester_project_2.git
+
+2. Install the dependencies:
+
+```bash
 npm install
-
 ```
-# Goal
+
+## Contributing
+
+If you would like to contribute, please create a new branch and create a pull request with your changes.
+
+## Contact
+
+You can reach me here:
+
+[My LinkedIn page](https://www.linkedin.com/in/linn-melberg-5788a11b6/)
+
+# Brief / Description
+
+## Goal
 
 To take the skills learned over the past three semesters and create an auction website.
-
-# Brief
 
 An auction site is looking to launch a website where users can add items to be bid on and bid on items other users have put up for auction.
 
